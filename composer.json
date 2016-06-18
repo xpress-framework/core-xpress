@@ -1,0 +1,22 @@
+{
+	"name": "xpress-framework/core-xpress",
+	"type": "wordpress-plugin",
+	"license": "EULA",
+	"description": "WordPress plugin for creation web applications fast and with a standard process.",
+	"homepage": "http://xpress-framework.github.io/",
+	"authors": [
+		{
+			"name": "Juan Manuel Arias",
+			"email": "trasgofurioso@gmail.com"
+		}
+	],
+	"keywords": [
+		"wordpress", "xpress", "framework"
+	],
+	"support": {
+		"issues": "https://github.com/xpress-framework/core-xpress/issues"
+	},
+	"require": {
+	},
+	"minimum-stability": "dev"
+}
