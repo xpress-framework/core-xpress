@@ -21,6 +21,7 @@ if ( ! class_exists( 'Core_Xpress' ) ) {
 
 		public function __construct() {
 			$this->require_dir( trailingslashit( plugin_dir_path( __FILE__ ) . 'includes' ) );
+			require_once( plugin_dir_path( __FILE__ ) . 'includes/titan-framework/titan-framework-embedder.php' );
 			add_action( 'plugins_loaded', array( $this, 'register_child_plugins' ), 0 );
 			add_action( 'plugins_loaded', array( $this, 'requires' ), 5 );
 		}
