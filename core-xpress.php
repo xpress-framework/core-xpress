@@ -41,7 +41,6 @@ if ( ! class_exists( 'Core_Xpress' ) ) {
 		}
 
 		private function require_dir( $directory ) {
-			var_dump($directory);
 			$php_files = glob( $directory . '*.php' );
 			if ( ! $php_files ) return false;
 			foreach( $php_files as $file ) {
