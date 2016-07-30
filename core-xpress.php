@@ -11,7 +11,7 @@ if ( ! class_exists( 'Core_Xpress' ) ) {
 		 * Plugin Slug
 		 * @var string
 		 */
-		public static $plugin_slug = 'core-xpress';
+		public static $plugin_slug = 'xpress';
 
 		/**
 		 * Required directories
@@ -21,6 +21,8 @@ if ( ! class_exists( 'Core_Xpress' ) ) {
 
 		public function __construct() {
 			$this->require_dir( trailingslashit( plugin_dir_path( __FILE__ ) . 'includes' ) );
+			require_once( plugin_dir_path( __FILE__ ) . 'includes/titan-framework/titan-framework-embedder.php' );
+			add_action( 'tf_create_options', array( $this, 'admin_options' ) );
 			add_action( 'plugins_loaded', array( $this, 'register_child_plugins' ), 0 );
 			add_action( 'plugins_loaded', array( $this, 'requires' ), 5 );
 		}
@@ -40,12 +42,15 @@ if ( ! class_exists( 'Core_Xpress' ) ) {
 		}
 
 		private function require_dir( $directory ) {
-			var_dump($directory);
 			$php_files = glob( $directory . '*.php' );
 			if ( ! $php_files ) return false;
 			foreach( $php_files as $file ) {
 				require_once $file;
 			}
+		}
+
+		public function admin_options() {
+			do_action( 'xpress_create_options' );
 		}
 	}
 	new Core_Xpress();

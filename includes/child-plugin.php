@@ -35,7 +35,7 @@ if ( ! class_exists( 'Child_Plugin_Xpress' ) ) {
 			$this->slug = $plugin['slug'];
 			$this->name = $plugin['name'];
 			$this->path = $plugin['path'];
-			add_filter( 'core-xpress/required_directories', array( $this, 'required_directories' ) );
+			add_filter( 'xpress/required_directories', array( $this, 'required_directories' ) );
 		}
 
 		public function required_directories( $directories ) {
