@@ -1,0 +1,78 @@
+{
+  "env": {
+    "browser": true,
+    "jquery": true
+  },
+  "globals": {
+    "_": true,
+    "Backbone": true,
+    "jQuery": true,
+    "JSON": true,
+    "wp": true,
+    "console": true
+  },
+  "rules": {
+    "curly": [ "error", "all" ],
+    "quotes": [ "error", "single" ],
+    "comma-style": [ "error", "last" ],
+    "space-in-parens": [ "error", "always", { "exceptions": ["{}"] }],
+    "object-curly-spacing": [ "error", "always" ],
+    "object-curly-newline": ["error", { "multiline": true }],
+    "array-bracket-spacing": [ "error", "always" ],
+    "computed-property-spacing": [ "error", "always" ],
+    "dot-notation": [ "warn", { "allowKeywords": true } ],
+    "semi": [ "error", "always" ],
+    "space-unary-ops": [
+      "error", {
+        "overrides": {
+          "!": true
+        }
+      }
+    ],
+    "newline-per-chained-call": [ "error", { "ignoreChainWithDepth": 2 } ],
+    "one-var": [ "error", "always" ],
+    "spaced-comment": [ "error", "always" ],
+    "line-comment-position": [ "error", { "position": "above" } ],
+    "lines-around-comment": [
+      "error", {
+        "beforeBlockComment": true,
+        "beforeLineComment": true,
+        "allowBlockStart": true,
+        "allowBlockEnd": false,
+        "allowObjectStart": true,
+        "allowObjectEnd": false,
+        "allowArrayStart": true,
+        "allowArrayEnd": false
+      }
+    ],
+    "no-inline-comments": [ "off" ],
+    "no-unused-vars": [ "warn" ],
+    "eqeqeq": [ "error", "allow-null" ],
+    "valid-typeof": [ "error" ],
+    "operator-linebreak": [ "error", "after" ],
+    "yoda": [ "warn", "always" ],
+    "no-cond-assign": [ "error", "except-parens" ],
+    "block-scoped-var": [ "error" ],
+    "camelcase": [ "error" ],
+    "new-cap": [ "error" ],
+    "guard-for-in": [ "error" ],
+    "no-bitwise": [ "error" ],
+    "no-caller": [ "error" ],
+    "no-debugger": [ "error" ],
+    "no-empty": [ "error" ],
+    "no-eval": [ "error" ],
+    "no-iterator": [ "error" ],
+    "no-new": [ "error" ],
+    "no-proto": [ "error" ],
+    "no-with": [ "error" ],
+    "no-extend-native": [ "error" ],
+    "no-irregular-whitespace": [ "error" ],
+    "no-loop-func": [ "error" ],
+    "no-multi-str": [ "off" ],
+    "no-script-url": [ "error" ],
+    "no-sequences": [ "error" ],
+    "no-shadow": [ "error" ],
+    "no-undef": [ "error" ],
+    "wrap-iife": [ "error", "inside" ]
+  }
+}
